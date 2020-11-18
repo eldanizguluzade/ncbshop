@@ -1,0 +1,49 @@
+@import "_variables";
+@import "_basic";
+
+
+#container{
+    position: relative;
+}
+header{
+    position: relative;
+    .hcenter-block{
+        background-color:$bg-primary;
+        box-shadow: 0 2px 2px 0 rgba(128, 128, 128, 0.589);
+        align-items: center;
+        margin:0;
+        z-index:1;
+       .l-block {
+             aside nav div{ 
+              position: fixed;
+              background-color: white;
+              top:0;
+              left:-230px;
+              width: 15rem;
+              padding:2rem 1.4rem;
+              z-index: 100;
+              transition: all 2s;
+              display: none;
+              
+       } 
+      }
+      .c-block{
+          i{font-size:1.5rem;}
+      }
+      .r-block{
+        font-size: 1.5rem;
+         ul li{float: left;padding:.3rem}
+      }
+
+    }
+    .hslide-block{
+        z-index: 0;
+    }
+ 
+}
+
+@media screen and(min-width:768px){
+    header .l-block{
+        display:none;
+    }
+}

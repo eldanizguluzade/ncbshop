@@ -1,0 +1,79 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 !important;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #2F2F2F;
+}
+ul li {
+  color: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #2F2F2F;
+}
+
+#container {
+  position: relative;
+}
+
+header {
+  position: relative;
+}
+header .hcenter-block {
+  background-color: #FF5C00;
+  box-shadow: 0 2px 2px 0 rgba(128, 128, 128, 0.589);
+  align-items: center;
+  margin: 0;
+  z-index: 1;
+}
+header .hcenter-block .l-block aside nav div {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: -230px;
+  width: 15rem;
+  padding: 2rem 1.4rem;
+  z-index: 100;
+  transition: all 2s;
+  display: none;
+}
+header .hcenter-block .c-block i {
+  font-size: 1.5rem;
+}
+header .hcenter-block .r-block {
+  font-size: 1.5rem;
+}
+header .hcenter-block .r-block ul li {
+  float: left;
+  padding: 0.3rem;
+}
+header .hslide-block {
+  z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+  header .l-block {
+    display: none;
+  }
+}

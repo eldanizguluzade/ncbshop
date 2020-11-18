@@ -1,0 +1,33 @@
+@import "variables";
+
+h1,h2,h3,h4,h5,h6{
+    margin:0!important;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+ul{
+    list-style: none;
+    padding:0;
+    color:$text-primary;
+    li{
+        color:inherit; 
+    }
+}
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+body{
+    margin:0;
+    padding: 0;
+    color:$text-primary;
+}
+
+
