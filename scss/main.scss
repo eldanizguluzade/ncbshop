@@ -41,9 +41,93 @@ header{
     }
  
 }
+main{
+     #main-categories {
+          margin:2rem 0rem;
+        .categories-title{
+                 margin:.3rem 0rem;
+               span{font-size: 1.3rem;font-weight: 600;}
+     }
+        .categories-content{
+            ul{
+                display: flex;
+                overflow-x:auto;
+                width: 100%;
+                padding:2rem 0 .2rem 0;
+                border-top:1px solid rgba(128, 128, 128, 0.507);
+             li{
+                 display: flex;
+                 position: relative;
+                 text-align:center;
+                 box-shadow: 0  0 1px 0 gray;
+                 transition: all .3s;
+                 &:not(:last-child){
+                     margin-right: 2rem;
+                 }
+                 &:hover{
+                     opacity: 0.9;
+                     background-color:$bg-black;
+                     color:$text-white;
+                 }
+                 .cat-header{
+                     width: 200px;
+                 }
+                 .cat-title{
+                    margin:.5rem 0;
+                    font-size:1.2rem;
+                    font-weight: 600;
+                 }
+             }
+            }
+        }
+    }
+    #main-sellers{
+         .seller-title{
+             font-size: 1.2rem;
+             font-weight: 600;
+             padding:.8rem 1rem;
+             background-color: $bg-grey;
+          i{
+                 color:$bg-primary;
+             }
+         }
+         .sellers-content{
+            padding:1rem;
+            ul {
+                li{
+                    margin-bottom:1rem;
+                    transition: all .3s;
+                    &:hover{
+                        opacity: 0.9;
+                        color:$bg-primary;
+                    }
+                    .img{
+                        float:left;
+                        margin-right:1rem;
+                    }
+                    .item-title{
+                        font-weight: 600;
+                    }
+                    .item-price{
+                          margin-top: 1rem;
+                    div{
+                         float:left;
+                         margin-right:1rem;
+                    }
 
-@media screen and(min-width:768px){
-    header .l-block{
-        display:none;
+                }
+                }
+            }
+         }
     }
 }
+
+
+
+
+
+ @media screen and(min-width:768px){
+     header .l-block{
+         display:none;
+     }
+ }

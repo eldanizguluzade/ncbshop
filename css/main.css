@@ -11,6 +11,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 
 ul {
   list-style: none;
@@ -25,6 +29,15 @@ ul li {
   content: "";
   display: block;
   clear: both;
+}
+
+.oprice {
+  font-size: 0.8rem;
+}
+
+.nprice {
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 body {
@@ -70,6 +83,81 @@ header .hcenter-block .r-block ul li {
 }
 header .hslide-block {
   z-index: 0;
+}
+
+main #main-categories {
+  margin: 2rem 0rem;
+}
+main #main-categories .categories-title {
+  margin: 0.3rem 0rem;
+}
+main #main-categories .categories-title span {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+main #main-categories .categories-content ul {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  padding: 2rem 0 0.2rem 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.507);
+}
+main #main-categories .categories-content ul li {
+  display: flex;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 1px 0 gray;
+  transition: all 0.3s;
+}
+main #main-categories .categories-content ul li:not(:last-child) {
+  margin-right: 2rem;
+}
+main #main-categories .categories-content ul li:hover {
+  opacity: 0.9;
+  background-color: black;
+  color: white;
+}
+main #main-categories .categories-content ul li .cat-header {
+  width: 200px;
+}
+main #main-categories .categories-content ul li .cat-title {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+main #main-sellers .seller-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  background-color: #F2F2F2;
+}
+main #main-sellers .seller-title i {
+  color: #FF5C00;
+}
+main #main-sellers .sellers-content {
+  padding: 1rem;
+}
+main #main-sellers .sellers-content ul li {
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+main #main-sellers .sellers-content ul li:hover {
+  opacity: 0.9;
+  color: #FF5C00;
+}
+main #main-sellers .sellers-content ul li .img {
+  float: left;
+  margin-right: 1rem;
+}
+main #main-sellers .sellers-content ul li .item-title {
+  font-weight: 600;
+}
+main #main-sellers .sellers-content ul li .item-price {
+  margin-top: 1rem;
+}
+main #main-sellers .sellers-content ul li .item-price div {
+  float: left;
+  margin-right: 1rem;
 }
 
 @media screen and (min-width: 768px) {

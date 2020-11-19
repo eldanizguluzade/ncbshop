@@ -10,6 +10,10 @@ img{
 a{
     text-decoration: none;
     color:inherit;
+    &:hover{
+        text-decoration: none;
+        color:inherit;
+    }
 }
 ul{
     list-style: none;
@@ -23,6 +27,14 @@ ul{
     content:"";
     display: block;
     clear: both;
+}
+.oprice{
+  font-size: .8rem;
+}
+.nprice{
+    font-weight: 600;
+    font-size: 1.1rem;
+
 }
 body{
     margin:0;
