@@ -40,6 +40,22 @@ ul li {
   font-size: 1.1rem;
 }
 
+main #categories-sell .categories-items > li, main #categories-sell, main #banner-ads-bottom, main #banner-ads-center ul li, main #banner-ads-center, main #main-sellers, main #main-categories {
+  margin: 2rem 0;
+}
+
+main #categories-sell .categories-items > li .categories-header, main #main-sellers .seller-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+}
+
+main #banner-ads-bottom div, main #banner-ads-center ul li div.img-responsive {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -85,9 +101,6 @@ header .hslide-block {
   z-index: 0;
 }
 
-main #main-categories {
-  margin: 2rem 0rem;
-}
 main #main-categories .categories-title {
   margin: 0.3rem 0rem;
 }
@@ -126,9 +139,6 @@ main #main-categories .categories-content ul li .cat-title {
   font-weight: 600;
 }
 main #main-sellers .seller-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 0.8rem 1rem;
   background-color: #F2F2F2;
 }
 main #main-sellers .seller-title i {
@@ -158,6 +168,54 @@ main #main-sellers .sellers-content ul li .item-price {
 main #main-sellers .sellers-content ul li .item-price div {
   float: left;
   margin-right: 1rem;
+}
+main #banner-ads-center ul li {
+  display: block;
+  width: 100%;
+}
+main #banner-ads-center ul li div.img-responsive {
+  height: 200px;
+}
+main #banner-ads-center .ads-1 .img-responsive {
+  background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/4.jpg);
+}
+main #banner-ads-center .ads-2 .img-responsive {
+  background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/5.jpg);
+}
+main #banner-ads-bottom .banner-1 {
+  background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/9.jpg);
+  height: 100px;
+}
+main #categories-sell .categories-items > li {
+  transition: all 0.3s;
+}
+main #categories-sell .categories-items > li:hover {
+  opacity: 0.9;
+}
+main #categories-sell .categories-items > li:nth-child(even) {
+  text-align: right;
+}
+main #categories-sell .categories-items > li .categories-header {
+  background-color: #FF5C00;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+main #categories-sell .sell-items-group {
+  display: flex;
+  flex-flow: row wrap;
+}
+main #categories-sell .sell-items-group li {
+  border: 1px solid rgba(128, 128, 128, 0.384);
+  text-align: center;
+  padding: 1rem;
+  width: 50%;
+}
+main #categories-sell .sell-items-group li .sell-item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+main #categories-sell .sell-items-group li .sell-item-price {
+  color: #FF5C00;
 }
 
 @media screen and (min-width: 768px) {

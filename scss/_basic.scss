@@ -36,6 +36,20 @@ ul{
     font-size: 1.1rem;
 
 }
+
+%tb-space{
+    margin:2rem 0;
+}
+%header-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding:.8rem 1rem;
+}
+%img-responsive{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
 body{
     margin:0;
     padding: 0;

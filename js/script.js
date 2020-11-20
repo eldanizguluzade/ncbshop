@@ -4,7 +4,7 @@ $(function(){
         if(!navcategory.hasClass("d-block")){
             navcategory.addClass("d-block").animate({
                 left:'0px',
-            },200);
+            },100);
         }
         });
        
@@ -12,7 +12,7 @@ $(function(){
     $("nav ul li .close").click(function(){
         navcategory.animate({
             left:"-240px"
-        },200);
+        },100);
 
         setTimeout(() => {
             if(navcategory.hasClass("d-block")){

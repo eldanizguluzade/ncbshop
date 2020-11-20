@@ -43,7 +43,7 @@ header{
 }
 main{
      #main-categories {
-          margin:2rem 0rem;
+          @extend %tb-space;
         .categories-title{
                  margin:.3rem 0rem;
                span{font-size: 1.3rem;font-weight: 600;}
@@ -82,10 +82,9 @@ main{
         }
     }
     #main-sellers{
+        @extend %tb-space;
          .seller-title{
-             font-size: 1.2rem;
-             font-weight: 600;
-             padding:.8rem 1rem;
+             @extend %header-title;
              background-color: $bg-grey;
           i{
                  color:$bg-primary;
@@ -118,11 +117,76 @@ main{
                 }
                 }
             }
-         }
+         }     
     }
+    #banner-ads-center{
+        @extend %tb-space;
+       ul li {
+        @extend %tb-space;
+        display: block;
+        width: 100%;
+        div.img-responsive{
+            @extend %img-responsive;
+            height: 200px;
+            
+        }
+       } 
+       .ads-1 .img-responsive{
+        background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/4.jpg);   
+      }
+       .ads-2 .img-responsive{
+        background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/5.jpg);   
+      }
+    }
+   #banner-ads-bottom{
+       @extend %tb-space;
+     div{
+        @extend %img-responsive;
+     }
+      .banner-1{
+        background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/9.jpg);  
+        height: 100px;
+      }
+   }
+    #categories-sell{
+        @extend %tb-space;
+       .categories-items>li{
+           transition: all .3s;
+           &:hover{
+               opacity: 0.9;
+           }
+        @extend %tb-space;
+           &:nth-child(even){
+               text-align:right;
+           }
+          .categories-header{
+            @extend %header-title;
+            background-color: $bg-primary;
+            color:$text-white;
+            border-radius:10px 10px 0 0;
+          }
+       }
+      .sell-items-group{
+          display:flex;
+          flex-flow: row wrap;
+         
+       li{
+          border:1px solid rgba(128, 128, 128, 0.384);
+          text-align:center;
+          padding:1rem;
+          width: 50%;
+          .sell-item-title{
+              font-size: 1.2rem;
+              font-weight: 600;
+          }
+          .sell-item-price{
+              color:$bg-primary;
+          }
+      }
+    }
+    }
+ 
 }
-
-
 
 
 
