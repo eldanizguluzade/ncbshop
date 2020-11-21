@@ -40,7 +40,7 @@ ul li {
   font-size: 1.1rem;
 }
 
-main #categories-sell .categories-items > li, main #categories-sell, main #banner-ads-bottom, main #banner-ads-center ul li, main #banner-ads-center, main #main-sellers, main #main-categories {
+footer #af-block #sub-soc-col .social-group, footer #af-block #nav-col, footer #af-block, main #categories-sell .categories-items > li, main #categories-sell, main #banner-ads-bottom, main #banner-ads-center ul li, main #banner-ads-center, main #main-sellers, main #main-categories {
   margin: 2rem 0;
 }
 
@@ -56,10 +56,22 @@ main #banner-ads-bottom div, main #banner-ads-center ul li div.img-responsive {
   background-position: center;
 }
 
+footer #af-block #transist-col ul li div i:first-child {
+  transform: rotateY(180deg);
+}
+
+footer #af-block #sub-soc-col .social-group ul li i, footer #af-block #more-about-col ul li .contact-group section .contact-icon i, header .hcenter-block .r-block ul li a i, header .hcenter-block .c-block button i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 body {
   margin: 0;
   padding: 0;
   color: #2F2F2F;
+  background-color: #F0F0F0;
 }
 
 #container {
@@ -69,12 +81,35 @@ body {
 header {
   position: relative;
 }
+header .menu-block nav {
+  padding: 1rem 1rem;
+}
+header .menu-block nav .navbar-toggler {
+  background-color: #2F2F2F;
+  color: white;
+  padding: 0.6rem 0.9rem;
+  font-size: 1.5rem;
+}
+header .menu-block nav .navbar-toggler:hover {
+  background-color: #393939;
+}
+header .menu-block nav h1 {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  color: #FF5C00;
+  font-weight: 400;
+  transition: font-size 0.3s;
+}
 header .hcenter-block {
   background-color: #FF5C00;
   box-shadow: 0 2px 2px 0 rgba(128, 128, 128, 0.589);
   align-items: center;
   margin: 0;
   z-index: 1;
+  padding: 0.3rem;
+}
+header .hcenter-block i {
+  font-size: 1.3rem;
 }
 header .hcenter-block .l-block aside nav div {
   position: fixed;
@@ -87,15 +122,23 @@ header .hcenter-block .l-block aside nav div {
   transition: all 2s;
   display: none;
 }
-header .hcenter-block .c-block i {
-  font-size: 1.5rem;
-}
-header .hcenter-block .r-block {
-  font-size: 1.5rem;
+header .hcenter-block .c-block button {
+  position: relative;
+  left: 2rem;
+  position: relative;
+  background-color: white;
+  padding: 1.3rem;
+  border-radius: 50%;
 }
 header .hcenter-block .r-block ul li {
   float: left;
   padding: 0.3rem;
+}
+header .hcenter-block .r-block ul li a {
+  position: relative;
+  background-color: white;
+  padding: 0.6rem 1.3rem;
+  border-radius: 50%;
 }
 header .hslide-block {
   z-index: 0;
@@ -187,7 +230,7 @@ main #banner-ads-bottom .banner-1 {
   height: 100px;
 }
 main #categories-sell .categories-items > li {
-  transition: all 0.3s;
+  transition: opacity 0.3s;
 }
 main #categories-sell .categories-items > li:hover {
   opacity: 0.9;
@@ -216,6 +259,155 @@ main #categories-sell .sell-items-group li .sell-item-title {
 }
 main #categories-sell .sell-items-group li .sell-item-price {
   color: #FF5C00;
+}
+
+footer #af-block #transist-col {
+  background-color: #FF5C00;
+}
+footer #af-block #transist-col ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+footer #af-block #transist-col ul li {
+  width: 100%;
+  color: white;
+}
+footer #af-block #transist-col ul li div i {
+  float: left;
+  margin: 1rem 0.8rem;
+  font-size: 2rem;
+}
+footer #af-block #transist-col ul li div span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+footer #af-block #transist-col ul li p {
+  font-size: 1rem;
+}
+footer #af-block #more-about-col ul li {
+  margin-bottom: 2rem;
+}
+footer #af-block #more-about-col ul li h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+footer #af-block #more-about-col ul li ul li {
+  margin-bottom: 1rem;
+  color: gray;
+  transition: all 0.3s;
+}
+footer #af-block #more-about-col ul li ul li:hover {
+  margin-left: 1rem;
+  color: #FF5C00;
+}
+footer #af-block #more-about-col ul li ul li .fas {
+  margin-right: 0.5rem;
+}
+footer #af-block #more-about-col ul li .contact-group section {
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+footer #af-block #more-about-col ul li .contact-group section .contact-icon {
+  position: relative;
+  color: white;
+  padding: 1rem;
+  background-color: gray;
+  float: left;
+  margin: 0.5rem 1rem 0.5rem 0;
+  border-radius: 2px;
+}
+footer #af-block #nav-col {
+  border: 1px solid rgba(128, 128, 128, 0.185);
+  padding: 2rem 0;
+}
+footer #af-block #nav-col nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+footer #af-block #nav-col nav ul li {
+  margin: 0.3rem 1rem;
+}
+footer #af-block #nav-col nav ul li a {
+  transition: all 0.3s;
+}
+footer #af-block #nav-col nav ul li a:hover {
+  color: #FF5C00;
+}
+footer #af-block #nav-col nav ul li h2 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+footer #af-block #nav-col nav .site-about-short {
+  text-align: center;
+  color: gray;
+}
+footer #af-block #sub-soc-col .subscribe-group p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+footer #af-block #sub-soc-col .subscribe-group form input[type=email] {
+  width: 50%;
+  padding: 1rem 2rem 1rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  color: gray;
+}
+footer #af-block #sub-soc-col .subscribe-group form input[type=submit] {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border-radius: 0 25px 25px 0;
+  background-color: #FF5C00;
+  color: white;
+  right: 20px;
+  bottom: 2.5px;
+}
+footer #af-block #sub-soc-col .subscribe-group form input[type=submit]:hover {
+  background-color: #cc4a00;
+}
+footer #af-block #sub-soc-col .social-group {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+footer #af-block #sub-soc-col .social-group ul li {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+footer #af-block #sub-soc-col .social-group ul li:hover {
+  color: #FF5C00;
+  cursor: pointer;
+}
+footer #bf-block {
+  text-align: center;
+  padding: 2rem;
+  background-color: #2F2F2F;
+  font-size: 1rem;
+}
+footer #bf-block .copyright {
+  color: gray;
+}
+footer #bf-block .designed-author {
+  color: #FF5C00;
+  margin-bottom: 0.6rem;
+}
+footer #bf-block p {
+  margin-bottom: 0.2rem;
+}
+footer #bf-block img {
+  margin: auto;
 }
 
 @media screen and (min-width: 768px) {
