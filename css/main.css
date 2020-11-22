@@ -60,7 +60,7 @@ footer #af-block #transist-col ul li div i:first-child {
   transform: rotateY(180deg);
 }
 
-footer #af-block #sub-soc-col .social-group ul li i, footer #af-block #more-about-col ul li .contact-group section .contact-icon i, header .hcenter-block .r-block ul li a i, header .hcenter-block .c-block button i {
+footer #af-block #sub-soc-col .social-group ul li i, footer #af-block #more-about-col ul li .contact-group section .contact-icon i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -95,10 +95,22 @@ header .menu-block nav .navbar-toggler:hover {
 }
 header .menu-block nav h1 {
   font-family: "Lobster", cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #FF5C00;
   font-weight: 400;
   transition: font-size 0.3s;
+}
+header .menu-block nav li {
+  margin-right: 1rem;
+}
+header .menu-block nav li a {
+  font-weight: 900;
+  transition: all 0.3s ease;
+}
+header .menu-block nav li a:hover {
+  background-color: #FF5C00;
+  color: white;
+  padding: 0.5rem;
 }
 header .hcenter-block {
   background-color: #FF5C00;
@@ -107,8 +119,6 @@ header .hcenter-block {
   margin: 0;
   z-index: 1;
   padding: 0.3rem;
-}
-header .hcenter-block i {
   font-size: 1.3rem;
 }
 header .hcenter-block .l-block aside nav div {
@@ -123,11 +133,9 @@ header .hcenter-block .l-block aside nav div {
   display: none;
 }
 header .hcenter-block .c-block button {
-  position: relative;
   left: 2rem;
-  position: relative;
   background-color: white;
-  padding: 1.3rem;
+  padding: 1rem;
   border-radius: 50%;
 }
 header .hcenter-block .r-block ul li {
@@ -135,13 +143,23 @@ header .hcenter-block .r-block ul li {
   padding: 0.3rem;
 }
 header .hcenter-block .r-block ul li a {
-  position: relative;
   background-color: white;
-  padding: 0.6rem 1.3rem;
+  padding: 1rem;
   border-radius: 50%;
 }
 header .hslide-block {
   z-index: 0;
+}
+header .hslide-block img {
+  margin: auto;
+}
+header .items-ads-block ul {
+  display: flex;
+  width: 97.4%;
+  justify-content: center;
+}
+header .items-ads-block ul li:hover {
+  opacity: 0.9;
 }
 
 main #main-categories .categories-title {
@@ -164,6 +182,7 @@ main #main-categories .categories-content ul li {
   text-align: center;
   box-shadow: 0 0 1px 0 gray;
   transition: all 0.3s;
+  background-color: white;
 }
 main #main-categories .categories-content ul li:not(:last-child) {
   margin-right: 2rem;
@@ -231,6 +250,7 @@ main #banner-ads-bottom .banner-1 {
 }
 main #categories-sell .categories-items > li {
   transition: opacity 0.3s;
+  background-color: white;
 }
 main #categories-sell .categories-items > li:hover {
   opacity: 0.9;
@@ -411,7 +431,49 @@ footer #bf-block img {
 }
 
 @media screen and (min-width: 768px) {
-  header .l-block {
+  header .hcenter-block .c-block .search-block form {
+    margin: auto;
+  }
+  header .hcenter-block .c-block .search-block form .cat-select, header .hcenter-block .c-block .search-block form .search-input {
+    float: left;
+    margin-left: 1rem;
+  }
+  header .hcenter-block .c-block .search-block form .cat-select select {
+    padding: 0.3rem 0.4rem;
+    box-sizing: content-box;
+    border-radius: 25px 0 0 25px;
+  }
+  header .hcenter-block .c-block .search-block form .search-input input {
+    padding: 0.3rem 1rem;
+    box-sizing: content-box;
+    border-radius: 0;
+    width: 400px;
+  }
+  header .hcenter-block .c-block .search-block form button[type=submit] {
+    border-radius: 0 25px 25px 0;
+    padding: 1rem 2rem;
+  }
+  header .hcenter-block .c-block .search-block form select, header .hcenter-block .c-block .search-block form input, header .hcenter-block .c-block .search-block form button:focus {
+    box-shadow: none;
+  }
+}
+@media (min-width: 992px) {
+  header .hcenter-block .l-block {
     display: none;
+  }
+  header .hslide-block .container #header-slide {
+    float: left;
+  }
+  header .items-ads-block ul {
+    display: block !important;
+  }
+
+  main #main-categories .categories-content ul li .cat-header {
+    width: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  main #main-categories .categories-content ul li .cat-header {
+    width: 195px;
   }
 }

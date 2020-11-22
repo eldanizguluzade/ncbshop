@@ -23,10 +23,23 @@ header {
             }
             h1 {
                 font-family: 'Lobster', cursive;
-                font-size: 3rem;
+                font-size: 2.5rem;
                 color: $bg-primary;
                 font-weight: 400;
                 transition: font-size .3s;
+            }
+            li{
+                margin-right:1rem;
+                a{
+                    font-weight:900;
+                    transition: all .3s ease;
+                    &:hover{
+                        background-color:$bg-primary;
+                        color:$text-white;
+                        padding:.5rem;
+                        
+                    }
+                }
             }
         }
     }
@@ -38,10 +51,7 @@ header {
         margin: 0;
         z-index: 1;
         padding:.3rem;
-        i{
-            font-size:1.3rem;
-        }
-
+        font-size:1.3rem;
         .l-block {
             aside nav div {
                 position: fixed;
@@ -56,16 +66,11 @@ header {
 
             }
         }
-         .c-block button{
-            position: relative;
+         .c-block button{    
             left:2rem;
-            position: relative;
             background-color: $text-white;
-            padding: 1.3rem;
+            padding: 1rem;
             border-radius: 50%;
-            i{
-                 @extend %center-absolute;
-            }
          }
 
         .r-block {
@@ -74,13 +79,10 @@ header {
                 float: left;
                 padding: .3rem;
                 a{
-                    position: relative;
                     background-color: $text-white;
-                    padding: .6rem 1.3rem;
+                    padding: 1rem;
                     border-radius: 50%;
-                   i{
-                    @extend %center-absolute;
-                   }
+                 
                 }
             }
         }
@@ -90,7 +92,24 @@ header {
 
     .hslide-block {
         z-index: 0;
+        
+        img{
+            margin:auto;
+        }
     }
+    .items-ads-block{
+        ul{
+            display:flex;
+            width: 97.4%;
+            justify-content: center;
+            li{
+                &:hover{
+                    opacity: .9;
+                }
+            }
+        }
+    }
+
 
 }
 
@@ -121,6 +140,7 @@ main {
                     text-align: center;
                     box-shadow: 0 0 1px 0 gray;
                     transition: all .3s;
+                    background-color:$bg-white;
 
                     &:not(:last-child) {
                         margin-right: 2rem;
@@ -236,7 +256,7 @@ main {
 
         .categories-items>li {
             transition: opacity .3s;
-
+            background-color:$bg-white;
             &:hover {
                 opacity: 0.9;
             }
@@ -499,8 +519,99 @@ footer {
 
 
 
+
 @media screen and(min-width:768px) {
-    header .l-block {
-        display: none;
+    header {
+        .hcenter-block{
+            .c-block .search-block{
+                  form{
+                      margin:auto;
+                      .cat-select,.search-input{
+                          float:left;
+                          margin-left: 1rem;
+                      }
+                      .cat-select select{
+                       padding:.3rem .4rem;
+                       box-sizing:content-box;
+                       border-radius: 25px 0 0 25px ;
+                      }
+                      .search-input input{
+                        padding:.3rem 1rem;
+                        box-sizing:content-box;
+                        border-radius:0;
+                        width: 400px;
+                      }
+                      button[type="submit"]{
+                        border-radius: 0 25px 25px 0;
+                        padding:1rem 2rem;
+                      }
+                      select,input,button:focus{
+                        box-shadow: none;
+                      }
+                  }
+            }
+  }
+}
+
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    header{
+     .hcenter-block{
+        .l-block{
+            display: none;
+        }
+        
+     }    
+
+
+
+
+
+
+
+    .hslide-block {
+      .container{
+        #header-slide {
+            float:left;
+         }
+      }   
+    }
+    .items-ads-block{
+        ul{
+            display:block!important;
+        
+        }
+    }
+ }
+ main{
+    #main-categories {
+        .categories-content {
+            ul {
+              li{
+                 .cat-header{
+                     width:150px;
+                 }
+              }
+            }
+        }
+    }
+}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    main{
+        #main-categories {
+            .categories-content {
+                ul {
+                  li{
+                     .cat-header{
+                         width:195px;
+                     }
+                  }
+                }
+            }
+        }
     }
 }
