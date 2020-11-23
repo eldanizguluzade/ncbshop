@@ -119,7 +119,9 @@ header .hcenter-block {
   margin: 0;
   z-index: 1;
   padding: 0.3rem;
-  font-size: 1.3rem;
+}
+header .hcenter-block button {
+  font-size: 1.1rem;
 }
 header .hcenter-block .l-block aside nav div {
   position: fixed;
@@ -135,7 +137,7 @@ header .hcenter-block .l-block aside nav div {
 header .hcenter-block .c-block button {
   left: 2rem;
   background-color: white;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 50%;
 }
 header .hcenter-block .r-block ul li {
@@ -144,7 +146,7 @@ header .hcenter-block .r-block ul li {
 }
 header .hcenter-block .r-block ul li a {
   background-color: white;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 50%;
 }
 header .hslide-block {
