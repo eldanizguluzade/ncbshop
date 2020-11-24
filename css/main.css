@@ -81,6 +81,9 @@ body {
 header {
   position: relative;
 }
+header .menu-block {
+  background-color: #F8F9FA;
+}
 header .menu-block nav {
   padding: 1rem 1rem;
 }
@@ -140,13 +143,25 @@ header .hcenter-block .c-block button {
   padding: 0.8rem;
   border-radius: 50%;
 }
+header .hcenter-block .r-block {
+  margin-right: 13px;
+}
 header .hcenter-block .r-block ul li {
+  position: relative;
   float: left;
   padding: 0.3rem;
 }
 header .hcenter-block .r-block ul li a {
   background-color: white;
   padding: 0.8rem;
+  border-radius: 50%;
+}
+header .hcenter-block .r-block ul li a .count {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background-color: white;
+  padding: 0.2rem 0.5rem;
   border-radius: 50%;
 }
 header .hslide-block {
@@ -436,7 +451,8 @@ footer #bf-block img {
   header .hcenter-block .c-block .search-block form {
     margin: auto;
   }
-  header .hcenter-block .c-block .search-block form .cat-select, header .hcenter-block .c-block .search-block form .search-input {
+  header .hcenter-block .c-block .search-block form .cat-select,
+header .hcenter-block .c-block .search-block form .search-input {
     float: left;
     margin-left: 1rem;
   }
@@ -449,13 +465,15 @@ footer #bf-block img {
     padding: 0.3rem 1rem;
     box-sizing: content-box;
     border-radius: 0;
-    width: 400px;
+    width: 200px;
   }
   header .hcenter-block .c-block .search-block form button[type=submit] {
     border-radius: 0 25px 25px 0;
     padding: 1rem 2rem;
   }
-  header .hcenter-block .c-block .search-block form select, header .hcenter-block .c-block .search-block form input, header .hcenter-block .c-block .search-block form button:focus {
+  header .hcenter-block .c-block .search-block form select,
+header .hcenter-block .c-block .search-block form input,
+header .hcenter-block .c-block .search-block form button:focus {
     box-shadow: none;
   }
 }
@@ -463,11 +481,65 @@ footer #bf-block img {
   header .hcenter-block .l-block {
     display: none;
   }
-  header .hslide-block .container #header-slide {
+  header .hcenter-block .c-block .search-block {
+    position: relative;
+    left: 6rem;
+    display: inline-block;
+  }
+  header .hbottom-block .container {
+    padding: 0;
+  }
+  header .hbottom-block .container .catgegory-web-block {
     float: left;
   }
-  header .items-ads-block ul {
-    display: block !important;
+  header .hbottom-block .container .catgegory-web-block ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0.9rem 0.9rem 0.1rem 1rem;
+    background-color: white;
+    border-radius: 0 0 0 15px;
+    text-align: left;
+  }
+  header .hbottom-block .container .catgegory-web-block ul li {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.192);
+  }
+  header .hbottom-block .container .catgegory-web-block ul li:not(:last-child) {
+    margin-bottom: 1.58rem;
+  }
+  header .hbottom-block .container .catgegory-web-block ul li:first-child {
+    position: absolute;
+    background-color: #2F2F2F;
+    color: white;
+    text-align: center;
+    align-self: flex-end;
+    width: 12.5rem;
+    height: 3.8rem;
+    top: 90px;
+    margin-right: -15px;
+    padding: 1.1rem 0;
+  }
+  header .hbottom-block .container .catgegory-web-block ul li:first-child span {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  header .hbottom-block .container .catgegory-web-block ul li:hover a {
+    color: #FF5C00;
+    transform: translate(5%, 0%);
+  }
+  header .hbottom-block .container .catgegory-web-block ul li a {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+  }
+  header .hbottom-block .container .catgegory-web-block ul li i {
+    margin-right: 1rem;
+    vertical-align: middle;
+    color: gray;
+  }
+  header .hbottom-block .container .hslide-block {
+    z-index: 0;
+    float: left;
   }
 
   main #main-categories .categories-content ul li .cat-header {
@@ -475,6 +547,16 @@ footer #bf-block img {
   }
 }
 @media (min-width: 1200px) {
+  header .hcenter-block .c-block .search-block form .search-input input {
+    padding: 0.3rem 1rem;
+    box-sizing: content-box;
+    border-radius: 0;
+    width: 370px;
+  }
+  header .hbottom-block .items-ads-block ul {
+    display: block !important;
+  }
+
   main #main-categories .categories-content ul li .cat-header {
     width: 195px;
   }
