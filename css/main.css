@@ -476,6 +476,28 @@ header .hcenter-block .c-block .search-block form input,
 header .hcenter-block .c-block .search-block form button:focus {
     box-shadow: none;
   }
+
+  main #categories-sell .categories-items li:nth-child(even) .sell-items-group li:first-child {
+    float: right;
+  }
+  main #categories-sell .categories-items li .sell-items-group {
+    display: block;
+  }
+  main #categories-sell .categories-items li .sell-items-group li {
+    float: left;
+  }
+  main #categories-sell .categories-items li .sell-items-group li:first-child {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+  main #categories-sell .categories-items li .sell-items-group li:first-child a {
+    display: block;
+    max-width: 99%;
+  }
+  main #categories-sell .categories-items li .sell-items-group li:not(:first-child) {
+    width: 300px;
+  }
 }
 @media (min-width: 992px) {
   header .hcenter-block .l-block {
