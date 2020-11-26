@@ -596,6 +596,7 @@ footer {
  main {
     #categories-sell {
         .categories-items li {
+            display: grid;
             &:nth-child(even) {
                 .sell-items-group li{
                     &:first-child{
@@ -604,31 +605,32 @@ footer {
                 }
             }
 
-             .sell-items-group {
-                display:block;
-            li{
-                float:left;
+             .sell-items-group {      
+                display: block; 
+            li{      
+                 display: block;
+                 background-color:$bg-white;
+                 float: left;
                   &:first-child{
                       width: auto;
-                      padding:0;     
+                      padding:0;
                       border: none;
-                      
-                    a{
-                      display:block;
-                      max-width: 99%;
-                    }
+                    
+                      a img{
+                        width: 99%;
+
+                      }
                   }
                   &:not(:first-child){
-                    width: 300px;
-                   
+                   width: 227px;
+                   height: 100%;
+               
                   }
-                
              }
         
             }
         }
     }
-
 }
 }
 
