@@ -333,7 +333,8 @@ footer {
         @extend %tb-space;
 
         #transist-col {
-            background-color: $bg-primary;    
+            background-color: $bg-primary;
+
             ul {
                 display: flex;
                 flex-wrap: nowrap;
@@ -361,7 +362,7 @@ footer {
                     }
 
                     p {
-                        font-size: .8rem;
+                        font-size: .7rem;
                     }
                 }
             }
@@ -632,16 +633,103 @@ footer {
                     a {
                         display: block;
                     }
-
                 }
-
                 .sell-items-group {
                     li {
+                        position: relative;
                         float: left;
                         display: block;
                         background-color: $bg-white;
                         width: 50%;
                         height: 100%;
+
+                        &:hover {
+                            a img,
+                            a div {
+                                opacity: .4;
+                                transition: opacity .3s;
+                            }
+                            .more-items {
+                                opacity: 1;
+                            }
+                        }
+                        a img {
+                            z-index: 10;
+                        }
+                        .more-items {
+                            opacity: 0;
+                            transition: .3s ease;
+                            overflow: hidden;
+                            @include center-absolute;
+                            width: 100%;
+                            height: 100%;
+
+                            button.item-modal {
+                                @include center-absolute;
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                                border-radius: 20%;
+                                border: 1px solid $bg-primary;
+
+                                &:hover {
+                                    background-color: $bg-primary;
+                                    color: $text-white;
+                                }
+                            }
+
+                            button {
+                                outline: none !important;
+                                box-shadow: none;
+                                transition: background-color, color .3s ease;
+                                color: $bg-primary;
+                            }
+
+                            .bottom-items {
+                                background-color: $bg-white;
+                                position: absolute;
+                                bottom: 2%;
+                                flex-wrap: nowrap;
+                                margin: auto;
+
+                                li {
+                                    display: block;
+                                    padding: 1px;
+                                    width: auto;
+                                    margin-left: 4px;
+                                    align-self: baseline;
+                                    border: 1px solid $bg-primary;
+
+                                    button {
+                                        font-size: .7rem;
+                                        font-weight: 600;
+                                        white-space: nowrap;
+                                    }
+
+                                    &:not(:first-child):hover {
+                                        background-color: $bg-primary;
+
+                                        button {
+                                            color: $text-white;
+                                        }
+                                    }
+
+                                    &:not(:first-child) {
+                                        border-radius: 50%;
+                                        padding: 3px 0;
+                                    }
+
+                                    &:first-child {
+                                        border-radius: 20px;
+                                        background-color: $bg-primary;
+
+                                        button {
+                                            color: $text-white;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
 
                     }
                 }
@@ -667,17 +755,20 @@ footer {
     }
 
     footer {
-        #af-block{
-        #transist-col {
-            ul {
-                li {
-                    div span, p {
-                        font-size: 1rem;
-                    }  
+        #af-block {
+            #transist-col {
+                ul {
+                    li {
+
+                        div span,
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
         }
-    }
+
         #sub-soc-col {
             align-items: baseline;
         }

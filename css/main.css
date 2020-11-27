@@ -335,7 +335,7 @@ footer #af-block #transist-col ul li div span {
   font-weight: 600;
 }
 footer #af-block #transist-col ul li p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 footer #af-block #more-about-col ul {
   align-items: baseline;
@@ -525,11 +525,91 @@ header .hcenter-block .c-block .search-block form button:focus {
     display: block;
   }
   main #categories-sell .categories-items li .sell-items-group li {
+    position: relative;
     float: left;
     display: block;
     background-color: white;
     width: 50%;
     height: 100%;
+  }
+  main #categories-sell .categories-items li .sell-items-group li:hover a img,
+main #categories-sell .categories-items li .sell-items-group li:hover a div {
+    opacity: 0.4;
+    transition: opacity 0.3s;
+  }
+  main #categories-sell .categories-items li .sell-items-group li:hover .more-items {
+    opacity: 1;
+  }
+  main #categories-sell .categories-items li .sell-items-group li a img {
+    z-index: 10;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items {
+    opacity: 0;
+    transition: 0.3s ease;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items button.item-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 20%;
+    border: 1px solid #FF5C00;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items button.item-modal:hover {
+    background-color: #FF5C00;
+    color: white;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items button {
+    outline: none !important;
+    box-shadow: none;
+    transition: background-color, color 0.3s ease;
+    color: #FF5C00;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items {
+    background-color: white;
+    position: absolute;
+    bottom: 2%;
+    flex-wrap: nowrap;
+    margin: auto;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items li {
+    display: block;
+    padding: 1px;
+    width: auto;
+    margin-left: 4px;
+    align-self: baseline;
+    border: 1px solid #FF5C00;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items li button {
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items li:not(:first-child):hover {
+    background-color: #FF5C00;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items li:not(:first-child):hover button {
+    color: white;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items li:not(:first-child) {
+    border-radius: 50%;
+    padding: 3px 0;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items li:first-child {
+    border-radius: 20px;
+    background-color: #FF5C00;
+  }
+  main #categories-sell .categories-items li .sell-items-group li .more-items .bottom-items li:first-child button {
+    color: white;
   }
   main #banner-ads-center ul {
     display: flex;
@@ -542,7 +622,8 @@ header .hcenter-block .c-block .search-block form button:focus {
     height: 200px;
   }
 
-  footer #af-block #transist-col ul li div span, footer #af-block #transist-col ul li p {
+  footer #af-block #transist-col ul li div span,
+footer #af-block #transist-col ul li p {
     font-size: 1rem;
   }
   footer #sub-soc-col {
