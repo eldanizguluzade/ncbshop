@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 !important;
 }
 
@@ -41,8 +46,12 @@ ul li {
 }
 
 body {
-  margin: 0;
   padding: 0;
   color: #2F2F2F;
   background-color: #F0F0F0;
+}
+body main {
+  background-color: white;
+  padding: 16px 0;
+  box-shadow: 0 0 3px 0 rgba(128, 128, 128, 0.247);
 }

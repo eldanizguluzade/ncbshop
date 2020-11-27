@@ -1,69 +1,90 @@
 @import "variables";
 
-h1,h2,h3,h4,h5,h6{
-    margin:0!important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
 }
-img{
+
+img {
     display: block;
     max-width: 100%;
 }
-a{
+
+a {
     text-decoration: none;
-    color:inherit;
-    &:hover{
+    color: inherit;
+
+    &:hover {
         text-decoration: none;
-        color:inherit;
+        color: inherit;
     }
 }
-ul{
+
+ul {
     list-style: none;
-    padding:0;
-    color:$text-primary;
-    li{
-        color:inherit; 
+    padding: 0;
+    color: $text-primary;
+
+    li {
+        color: inherit;
     }
 }
-.clearfix::after{
-    content:"";
+
+.clearfix::after {
+    content: "";
     display: block;
     clear: both;
 }
-.oprice{
-  font-size: .8rem;
+
+.oprice {
+    font-size: .8rem;
 }
-.nprice{
+
+.nprice {
     font-weight: 600;
     font-size: 1.1rem;
 
 }
 
-%tb-space{
-    margin:2rem 0;
+%tb-space {
+    margin: 2rem 0;
 }
-%header-title{
+
+%header-title {
     font-size: 1.2rem;
     font-weight: 600;
-    padding:.8rem 1rem;
+    padding: .8rem 1rem;
 }
-%img-responsive{
-    width: 100%;
+
+%img-responsive {
+    max-width: 100%;
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
 }
-%reverse{
+
+%reverse {
     transform: rotateY(180deg);
 }
-%center-absolute{
+
+%center-absolute {
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-body{
-    margin:0;
+
+body {
     padding: 0;
-    color:$text-primary;
-    background-color:$bg-color;
+    color: $text-primary;
+    background-color: $bg-color;
+
+    main {
+        background-color: $bg-white;
+        padding: 16px 0;
+        box-shadow: 0 0 3px 0 rgba(128, 128, 128, 0.247);
+    }
 }
-
-

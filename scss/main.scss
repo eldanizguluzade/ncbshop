@@ -1,6 +1,9 @@
 @import "_variables";
 @import "_basic";
 
+html {
+    font-size: 15px;
+}
 
 #container {
     position: relative;
@@ -109,7 +112,6 @@ header {
                             border-radius: 50%;
 
                         }
-
                     }
                 }
             }
@@ -144,8 +146,6 @@ header {
 
 main {
     #main-categories {
-        @extend %tb-space;
-
         .categories-title {
             margin: .3rem 0rem;
 
@@ -276,7 +276,7 @@ main {
 
         .banner-1 {
             background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/9.jpg);
-            height: 100px;
+            height: 210px;
         }
     }
 
@@ -333,12 +333,11 @@ footer {
         @extend %tb-space;
 
         #transist-col {
-            background-color: $bg-primary;
-
+            background-color: $bg-primary;    
             ul {
                 display: flex;
                 flex-wrap: nowrap;
-                align-items: center;
+                align-items: baseline;
                 justify-content: center;
                 padding: 1rem;
 
@@ -357,12 +356,12 @@ footer {
                     }
 
                     div span {
-                        font-size: 1rem;
+                        font-size: .6rem;
                         font-weight: 600;
                     }
 
                     p {
-                        font-size: 1rem;
+                        font-size: .8rem;
                     }
                 }
             }
@@ -370,6 +369,9 @@ footer {
 
         #more-about-col {
             ul {
+                align-items: baseline;
+                justify-content: center;
+
                 li {
                     margin-bottom: 2rem;
 
@@ -422,7 +424,8 @@ footer {
 
         #nav-col {
             @extend %tb-space;
-            border: 1px solid rgba(128, 128, 128, 0.185);
+            border-top: 1px solid rgba(128, 128, 128, 0.185);
+            border-bottom: 1px solid rgba(128, 128, 128, 0.185);
             padding: 2rem 0;
 
             nav {
@@ -547,10 +550,11 @@ footer {
     }
 }
 
-
-
-
 @media screen and(min-width:768px) {
+    html {
+        font-size: 16px;
+    }
+
     header {
         .hcenter-block {
             .c-block {
@@ -593,45 +597,91 @@ footer {
         }
     }
 
- main {
-    #categories-sell {
-        .categories-items li {
-            display: grid;
-            &:nth-child(even) {
-                .sell-items-group li{
-                    &:first-child{
-                        float: right;
+    main {
+        #categories-sell {
+            .categories-items li {
+                display: grid;
+
+                .categories-content aside {
+                    a img {
+                        width: 98%;
+                    }
+                }
+
+                &:nth-child(odd) .categories-content aside {
+                    a img {
+                        margin-left: auto;
+                    }
+                }
+
+                &:nth-child(even) .categories-content aside {
+                    float: right;
+                    text-align: left;
+                }
+
+                .categories-header {
+                    box-shadow: 0 1px 10px 0 rgba(128, 128, 128, 0.212);
+                    z-index: 1;
+                }
+
+                .categories-content aside {
+                    float: left;
+                    padding: 0;
+                    width: auto;
+
+                    a {
+                        display: block;
+                    }
+
+                }
+
+                .sell-items-group {
+                    li {
+                        float: left;
+                        display: block;
+                        background-color: $bg-white;
+                        width: 50%;
+                        height: 100%;
+
+                    }
+                }
+
+            }
+        }
+
+        #banner-ads-center {
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+
+                li {
+                    width: 48%;
+
+                    div.img-responsive {
+                        height: 200px;
+
                     }
                 }
             }
+        }
+    }
 
-             .sell-items-group {      
-                display: block; 
-            li{      
-                 display: block;
-                 background-color:$bg-white;
-                 float: left;
-                  &:first-child{
-                      width: auto;
-                      padding:0;
-                      border: none;
-                    
-                      a img{
-                        width: 99%;
-
-                      }
-                  }
-                  &:not(:first-child){
-                   width: 227px;
-                   height: 100%;
-               
-                  }
-             }
-        
+    footer {
+        #af-block{
+        #transist-col {
+            ul {
+                li {
+                    div span, p {
+                        font-size: 1rem;
+                    }  
+                }
             }
         }
     }
-}
+        #sub-soc-col {
+            align-items: baseline;
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)
@@ -660,13 +710,15 @@ footer {
 
                 .catgegory-web-block {
                     float: left;
+                    box-shadow: -2px 0 10px rgba(128, 128, 128, 0.199);
 
                     ul {
                         display: flex;
                         flex-direction: column;
                         padding: .9rem .9rem .1rem 1rem;
+                        margin-bottom: 0px;
                         background-color: $bg-white;
-                        border-radius: 0 0 0 15px;
+                        border-radius: 0 0 0 8px;
                         text-align: left;
 
                         li {
@@ -738,6 +790,19 @@ footer {
                 }
             }
         }
+
+        #categories-sell {
+            .categories-items li {
+
+                .sell-items-group {
+                    li {
+                        width: 33.3%;
+
+                    }
+                }
+
+            }
+        }
     }
 }
 
@@ -779,6 +844,25 @@ footer {
                     }
                 }
             }
+        }
+
+        #categories-sell {
+            .categories-items li {
+
+                .sell-items-group {
+                    li {
+                        width: 20%;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    footer {
+        div.container {
+            max-width: 1379px !important;
         }
     }
 }

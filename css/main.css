@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 !important;
 }
 
@@ -40,7 +45,7 @@ ul li {
   font-size: 1.1rem;
 }
 
-footer #af-block #sub-soc-col .social-group, footer #af-block #nav-col, footer #af-block, main #categories-sell .categories-items > li, main #categories-sell, main #banner-ads-bottom, main #banner-ads-center ul li, main #banner-ads-center, main #main-sellers, main #main-categories {
+footer #af-block #sub-soc-col .social-group, footer #af-block #nav-col, footer #af-block, main #categories-sell .categories-items > li, main #categories-sell, main #banner-ads-bottom, main #banner-ads-center ul li, main #banner-ads-center, main #main-sellers {
   margin: 2rem 0;
 }
 
@@ -51,9 +56,9 @@ main #categories-sell .categories-items > li .categories-header, main #main-sell
 }
 
 main #banner-ads-bottom div, main #banner-ads-center ul li div.img-responsive {
-  width: 100%;
+  max-width: 100%;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
 }
 
 footer #af-block #transist-col ul li div i:first-child {
@@ -68,10 +73,18 @@ footer #af-block #sub-soc-col .social-group ul li i, footer #af-block #more-abou
 }
 
 body {
-  margin: 0;
   padding: 0;
   color: #2F2F2F;
   background-color: #F0F0F0;
+}
+body main {
+  background-color: white;
+  padding: 16px 0;
+  box-shadow: 0 0 3px 0 rgba(128, 128, 128, 0.247);
+}
+
+html {
+  font-size: 15px;
 }
 
 #container {
@@ -263,7 +276,7 @@ main #banner-ads-center .ads-2 .img-responsive {
 }
 main #banner-ads-bottom .banner-1 {
   background-image: url(https://opencart.opencartworks.com/themes/so_revo3/image/catalog/demo/banners/home1/9.jpg);
-  height: 100px;
+  height: 210px;
 }
 main #categories-sell .categories-items > li {
   transition: opacity 0.3s;
@@ -304,7 +317,7 @@ footer #af-block #transist-col {
 footer #af-block #transist-col ul {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   padding: 1rem;
 }
@@ -318,11 +331,15 @@ footer #af-block #transist-col ul li div i {
   font-size: 2rem;
 }
 footer #af-block #transist-col ul li div span {
-  font-size: 1rem;
+  font-size: 0.6rem;
   font-weight: 600;
 }
 footer #af-block #transist-col ul li p {
-  font-size: 1rem;
+  font-size: 0.8rem;
+}
+footer #af-block #more-about-col ul {
+  align-items: baseline;
+  justify-content: center;
 }
 footer #af-block #more-about-col ul li {
   margin-bottom: 2rem;
@@ -359,7 +376,8 @@ footer #af-block #more-about-col ul li .contact-group section .contact-icon {
   border-radius: 2px;
 }
 footer #af-block #nav-col {
-  border: 1px solid rgba(128, 128, 128, 0.185);
+  border-top: 1px solid rgba(128, 128, 128, 0.185);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.185);
   padding: 2rem 0;
 }
 footer #af-block #nav-col nav ul {
@@ -448,6 +466,10 @@ footer #bf-block img {
 }
 
 @media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
   header .hcenter-block .c-block .search-block form {
     margin: auto;
   }
@@ -480,28 +502,51 @@ header .hcenter-block .c-block .search-block form button:focus {
   main #categories-sell .categories-items li {
     display: grid;
   }
-  main #categories-sell .categories-items li:nth-child(even) .sell-items-group li:first-child {
-    float: right;
+  main #categories-sell .categories-items li .categories-content aside a img {
+    width: 98%;
   }
-  main #categories-sell .categories-items li .sell-items-group {
+  main #categories-sell .categories-items li:nth-child(odd) .categories-content aside a img {
+    margin-left: auto;
+  }
+  main #categories-sell .categories-items li:nth-child(even) .categories-content aside {
+    float: right;
+    text-align: left;
+  }
+  main #categories-sell .categories-items li .categories-header {
+    box-shadow: 0 1px 10px 0 rgba(128, 128, 128, 0.212);
+    z-index: 1;
+  }
+  main #categories-sell .categories-items li .categories-content aside {
+    float: left;
+    padding: 0;
+    width: auto;
+  }
+  main #categories-sell .categories-items li .categories-content aside a {
     display: block;
   }
   main #categories-sell .categories-items li .sell-items-group li {
+    float: left;
     display: block;
     background-color: white;
-    float: left;
-  }
-  main #categories-sell .categories-items li .sell-items-group li:first-child {
-    width: auto;
-    padding: 0;
-    border: none;
-  }
-  main #categories-sell .categories-items li .sell-items-group li:first-child a img {
-    width: 99%;
-  }
-  main #categories-sell .categories-items li .sell-items-group li:not(:first-child) {
-    width: 227px;
+    width: 50%;
     height: 100%;
+  }
+  main #banner-ads-center ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  main #banner-ads-center ul li {
+    width: 48%;
+  }
+  main #banner-ads-center ul li div.img-responsive {
+    height: 200px;
+  }
+
+  footer #af-block #transist-col ul li div span, footer #af-block #transist-col ul li p {
+    font-size: 1rem;
+  }
+  footer #sub-soc-col {
+    align-items: baseline;
   }
 }
 @media (min-width: 992px) {
@@ -518,13 +563,15 @@ header .hcenter-block .c-block .search-block form button:focus {
   }
   header .hbottom-block .container .catgegory-web-block {
     float: left;
+    box-shadow: -2px 0 10px rgba(128, 128, 128, 0.199);
   }
   header .hbottom-block .container .catgegory-web-block ul {
     display: flex;
     flex-direction: column;
     padding: 0.9rem 0.9rem 0.1rem 1rem;
+    margin-bottom: 0px;
     background-color: white;
-    border-radius: 0 0 0 15px;
+    border-radius: 0 0 0 8px;
     text-align: left;
   }
   header .hbottom-block .container .catgegory-web-block ul li {
@@ -572,6 +619,9 @@ header .hcenter-block .c-block .search-block form button:focus {
   main #main-categories .categories-content ul li .cat-header {
     width: 150px;
   }
+  main #categories-sell .categories-items li .sell-items-group li {
+    width: 33.3%;
+  }
 }
 @media (min-width: 1200px) {
   header .hcenter-block .c-block .search-block form .search-input input {
@@ -586,5 +636,12 @@ header .hcenter-block .c-block .search-block form button:focus {
 
   main #main-categories .categories-content ul li .cat-header {
     width: 195px;
+  }
+  main #categories-sell .categories-items li .sell-items-group li {
+    width: 20%;
+  }
+
+  footer div.container {
+    max-width: 1379px !important;
   }
 }
