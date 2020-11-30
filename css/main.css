@@ -30,10 +30,8 @@ ul li {
   color: inherit;
 }
 
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+.primary-color {
+  background-color: #FF5C00 !important;
 }
 
 .oprice {
@@ -145,10 +143,16 @@ header .hcenter-block .l-block aside nav div {
   top: 0;
   left: -230px;
   width: 15rem;
+  height: 100%;
   padding: 2rem 1.4rem;
   z-index: 100;
   transition: all 2s;
   display: none;
+}
+header .hcenter-block .l-block aside nav div a.navbar-brand span {
+  font-family: Lobster, cursive;
+  color: gray;
+  font-size: 2.5rem;
 }
 header .hcenter-block .c-block button {
   left: 2rem;
@@ -260,6 +264,10 @@ main #main-sellers .sellers-content ul li .item-price {
 main #main-sellers .sellers-content ul li .item-price div {
   float: left;
   margin-right: 1rem;
+}
+main #main-sellers .sellers-content #brand-item-carousel a[href="#brand-item-carousel"] > span:first-child {
+  border-radius: 50%;
+  padding: 1rem;
 }
 main #banner-ads-center ul li {
   display: block;
@@ -491,7 +499,7 @@ header .hcenter-block .c-block .search-block form .search-input {
   }
   header .hcenter-block .c-block .search-block form button[type=submit] {
     border-radius: 0 25px 25px 0;
-    padding: 1rem 2rem;
+    padding: 0.976rem 2rem;
   }
   header .hcenter-block .c-block .search-block form select,
 header .hcenter-block .c-block .search-block form input,

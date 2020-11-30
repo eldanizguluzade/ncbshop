@@ -33,13 +33,9 @@ ul {
         color: inherit;
     }
 }
-
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
+.primary-color{
+    background-color:$bg-primary!important;
 }
-
 .oprice {
     font-size: .8rem;
 }

@@ -29,7 +29,7 @@ header {
                 }
             }
 
-            h1 {
+            h1{
                 font-family: 'Lobster', cursive;
                 font-size: 2.5rem;
                 color: $bg-primary;
@@ -74,11 +74,17 @@ header {
                 top: 0;
                 left: -230px;
                 width: 15rem;
+                height: 100%;
                 padding: 2rem 1.4rem;
                 z-index: 100;
                 transition: all 2s;
                 display: none;
 
+                a.navbar-brand span{
+                    font-family: Lobster, cursive;
+                    color:gray;
+                    font-size:2.5rem;
+                }
             }
         }
 
@@ -238,6 +244,12 @@ main {
                         }
 
                     }
+                }
+            }
+            #brand-item-carousel{
+                a[href="#brand-item-carousel"] > span:first-child{
+                    border-radius: 50%;
+                    padding:1rem;
                 }
             }
         }
@@ -583,7 +595,7 @@ footer {
 
                         button[type="submit"] {
                             border-radius: 0 25px 25px 0;
-                            padding: 1rem 2rem;
+                            padding: .976rem 2rem;
                         }
 
                         select,
