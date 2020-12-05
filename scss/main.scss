@@ -560,7 +560,48 @@ footer {
             margin: auto;
         }
     }
+    #angleup{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size:2rem;
+        border:1px solid $text-gray;
+        opacity: .7;
+        display: none;
+        &:hover{
+            opacity: 1;
+
+        }
+    }
 }
+
+.modal{
+    .modal-body{
+        #protitle{
+            font-size: 1.2rem;
+        }
+        .price-group{
+            font-size:1.2rem;
+             span.new,del{
+                 font-weight: 600;
+             }
+            span.new{  
+               color:$text-orange;
+            }
+            del{
+               color:lighten($text-orange,20);
+               font-size:1.1rem;
+            }
+
+        }
+    }
+    .modal-footer{
+        span{
+            font-size:1.4rem;
+        }
+      
+    }
+} 
 
 @media screen and(min-width:768px) {
     html {
@@ -784,6 +825,28 @@ footer {
             align-items: baseline;
         }
     }
+    .modal{
+        .modal-body{
+            #protitle{
+                font-size: 1.4rem;
+            }
+            .price-group{
+              
+                 span.new,del{
+                     font-weight: 600;
+                     font-size:1.4rem;
+                 }
+                span.h4{
+                   color:$text-orange;
+                }
+                del{
+                   color:lighten($text-orange,20);
+                   font-size:1.2rem;
+                }
+    
+            }
+        }
+    } 
 }
 
 // Large devices (desktops, 992px and up)
@@ -965,23 +1028,6 @@ footer {
     footer {
         div.container {
             max-width: 1379px !important;
-        }
-    }
-}
-
-.modal{
-    .modal-body{
-        .price-group{
-            span.name{
-                font-size:1.3rem;
-            }
-            span.h4{
-               color:$text-orange;
-            }
-            del{
-               color:lighten($text-orange,20);
-            }
-
         }
     }
 }
