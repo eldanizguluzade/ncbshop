@@ -4,8 +4,20 @@
 html {
     font-size: 15px;
 }
+#loading{
+    position: fixed;
+    z-index: 2000;
+    top:50%;
+    left:50%;
+    i{
+       font-size:3.7rem;
+       color:$bg-primary;  
+       animation: loading 1s 15 linear;
+    }
+}
 
 #container {
+    filter: blur(50px);
     position: relative;
 }
 
@@ -1030,4 +1042,9 @@ footer {
             max-width: 1379px !important;
         }
     }
+}
+
+@keyframes loading{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }

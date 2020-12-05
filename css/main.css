@@ -85,7 +85,20 @@ html {
   font-size: 15px;
 }
 
+#loading {
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  left: 50%;
+}
+#loading i {
+  font-size: 3.7rem;
+  color: #FF5C00;
+  animation: loading 1s 15 linear;
+}
+
 #container {
+  filter: blur(50px);
   position: relative;
 }
 
@@ -779,5 +792,13 @@ footer #af-block #transist-col ul li p {
 
   footer div.container {
     max-width: 1379px !important;
+  }
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

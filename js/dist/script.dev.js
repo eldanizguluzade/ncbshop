@@ -1,8 +1,13 @@
 "use strict";
 
 $(function () {
+  //For loading Upload Website time
+  //Start
+  $("#loading").css("display", "none");
+  $("#container").css("filter", "none"); //End
   //Effects Navbar and more
   //Start
+
   navcategory = $("#navcategory");
   $("#navcategorybtn").click(function () {
     if (!navcategory.hasClass("d-block")) {

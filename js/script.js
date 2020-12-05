@@ -1,4 +1,9 @@
 $(function(){
+    //For loading Upload Website time
+    //Start
+     $("#loading").css("display","none");
+     $("#container").css("filter","none");
+   //End
 
     //Effects Navbar and more
     //Start
