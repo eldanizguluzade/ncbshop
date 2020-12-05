@@ -1435,27 +1435,32 @@
            <div class="modal-dialog modal-dialog-centered" role="document">
                <div class="modal-content">
                        <div class="modal-header">
-                               <h5 class="modal-title">Ürün Hakkında</h5>
+                               <h5 class="modal-title">Product Info</h5>
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                    </button>
                            </div>
                    <div class="modal-body">
                        <div class="container">
-                           <div class="img-group">
+                           <div class="img-group float-left">
                                <img id="imgproduct" src="http://placehold.it/150x150" alt="not found photo">
                            </div>
                          <div class="title">
                             <span id="protitle" class="h4">Product Title</span>
                          </div>
-                          <div class="text">
+                         <div class="price-group">
+                             <span class="name">Price:</span>
+                             <span class="h4">10$</span>
+                             <del class="h5">15$</del>
+                         </div>
+                          <div class="text mt-3">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quaerat.</p>
                           </div>
                          
                        </div>
                    </div>
                    <div class="modal-footer">
-                     
+                     <button class="btn btn-success btn-block"><i class="fas fa-phone-alt mx-2"></i>Call us</button>
                    </div>
                </div>
            </div>
@@ -1470,27 +1475,6 @@
     </script>
     <script src="js/script.js"></script>
 
-
-
-
-    <script>
-        $('#product').on('show.bs.modal', event => {
-            var button = $(event.relatedTarget);
-            let proimgurl=button.parents().eq(1).children("a").children("img").attr("src");
-            let procontent=button.parents().eq(1).children("a").children(".sell-item-content");
-            let protitle=procontent.children(".sell-item-title").children("span").text();
-
-            if(proimgurl === undefined){
-                 proimgurl=button.children("img").attr("src");
-                 procontent=button.children(".sell-item-content");   
-                 protitle=procontent.children(".sell-item-title").children("span").text();
-            }
-
-            $("#imgproduct").attr("src",proimgurl);
-            $("#protitle").text(protitle);
-            // Use above variables to manipulate the DOM 
-        });
-    </script>
 
 </body>
 

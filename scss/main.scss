@@ -968,3 +968,20 @@ footer {
         }
     }
 }
+
+.modal{
+    .modal-body{
+        .price-group{
+            span.name{
+                font-size:1.3rem;
+            }
+            span.h4{
+               color:$text-orange;
+            }
+            del{
+               color:lighten($text-orange,20);
+            }
+
+        }
+    }
+}

@@ -734,3 +734,12 @@ footer #af-block #transist-col ul li p {
     max-width: 1379px !important;
   }
 }
+.modal .modal-body .price-group span.name {
+  font-size: 1.3rem;
+}
+.modal .modal-body .price-group span.h4 {
+  color: #FF5C00;
+}
+.modal .modal-body .price-group del {
+  color: #ff9d66;
+}

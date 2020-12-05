@@ -21,4 +21,28 @@ $(function(){
         }, 2000);
 
     });
+
+
+
+    //Modal Responsiv and Web Open For Products
+    $('#product').on('show.bs.modal', event => {
+        var button = $(event.relatedTarget);
+        let proimgurl,procontent,protitle;
+
+        if($(document).width() > 768){
+            proimgurl=button.parents().eq(1).children("a").children("img").attr("src");
+            procontent=button.parents().eq(1).children("a").children(".sell-item-content");
+            protitle=procontent.children(".sell-item-title").children("span").text();
+        }
+        else if($(document).width() <= 768){
+             proimgurl=button.children("img").attr("src");
+             procontent=button.children(".sell-item-content");   
+             protitle=procontent.children(".sell-item-title").children("span").text();
+        }
+
+        $("#imgproduct").attr("src",proimgurl);
+        $("#protitle").text(protitle);
+        // Use above variables to manipulate the DOM 
+    });
+
 });
