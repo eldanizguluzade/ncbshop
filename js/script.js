@@ -30,7 +30,6 @@ $(function(){
     });
     //End
 
-
 //  //Copy Number For Click and more.
 //     //Start
 //     $(".modal .modal-footer span.phone > span").click(function(){

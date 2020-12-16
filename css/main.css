@@ -90,6 +90,7 @@ html {
   z-index: 2000;
   top: 50%;
   left: 50%;
+  transform: translate(-50, -50);
 }
 #loading i {
   font-size: 3.7rem;
@@ -330,6 +331,9 @@ main #categories-sell .sell-items-group li .sell-item-title {
 }
 main #categories-sell .sell-items-group li .sell-item-price {
   color: #FF5C00;
+}
+main #categories-sell .sell-items-group li img {
+  margin: auto;
 }
 
 footer #af-block #transist-col {
