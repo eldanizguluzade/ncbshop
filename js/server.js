@@ -1,4 +1,4 @@
- fetch('/json/products.json')
+ fetch('https://eldanizguluzade.github.io/ncbshop/json/products.json')
     .then(response => {
         if (response.status >= 200 && response.status < 300) {
             return Promise.resolve(response);
